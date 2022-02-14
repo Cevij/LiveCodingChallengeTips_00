@@ -35,36 +35,36 @@ Read the question THOROUGHLY!!
 
 First paragraph:
 - I see the nouns Social Service, Users, and Books. 
-- 	I now need to determine how we will use these nouns. I decided to have them all as classes
+--I now need to determine how we will use these nouns. I decided to have them all as classes
 
 First Question:
  - I see the phases add users and list users. 
-  So I have to decide on a data structure two things come to mind: a list or a hashmap were my first thoughts. I chose to have a list in the service to     hold all the users. I chose the list because there is no need for a key as of now since all I need to do is list all users in service.
+  --So I have to decide on a data structure two things come to mind: a list or a hashmap were my first thoughts. I chose to have a list in the service to     hold all the users. I chose the list because there is no need for a key as of now since all I need to do is list all users in service.
  - Users need to have an email and username. 
-  So it should only have getters where you can access the name and email. Email should always be unique so if you want to search for a certain user.
+  --So it should only have getters where you can access the name and email. Email should always be unique so if you want to search for a certain user.
  - List all the users in the service. 
-  So in the service you will need a collection to hold all the users. I just used a list again because it says nothing about searching for a certain       element. 
+  --So in the service you will need a collection to hold all the users. I just used a list again because it says nothing about searching for a certain       element. 
 
 Second Question:
  - I see something similar to question 1. 
-  So I repeat what I did for users but to books this time. 
+  --So I repeat what I did for users but to books this time. 
  - List all the books in the service.
  - Books need to have a title and author. 
-  So it should only have getters where you can access the title and author.
+  --So it should only have getters where you can access the title and author.
  
 Third Question:
  - Needs to keep track of the books that the user read while keeping track of the date it was read. 
-  So I used a TreeMap in the user class because with the key being LocalDate and the value being a list of books. This is a good set up for me getting the most recent date or the oldest date by using lastKey() or firstKey()
+  --So I used a TreeMap in the user class because with the key being LocalDate and the value being a list of books. This is a good set up for me getting the most recent date or the oldest date by using lastKey() or firstKey()
  - List all the books a user has read. 
-  This will just print out the entire treemap.
+  --This will just print out the entire treemap.
 
 Fourth Question:
  - When the user is created should be able to choose between 2 different profiles.
-  So when reading this I usually will think oh i can just use a bool or int or string to select the different profiles. WRONG, don't do that! Use an enum  to choose the profile. It's cleaner, it's more organized, and it prevents inconsistent code.
+  --So when reading this I usually will think oh i can just use a bool or int or string to select the different profiles. WRONG, don't do that! Use an enum  to choose the profile. It's cleaner, it's more organized, and it prevents inconsistent code.
  - Profile 1 should show the user name and the number of books that were read.
-  Make a function to count all the books and return a int
+  --Make a function to count all the books and return a int
  - Profile 2 should show user name and latest book read
-  This is where I would use firstKey() in TreeMap to get the latest list of books
+  --This is where I would use firstKey() in TreeMap to get the latest list of books
 
 
 Always make your code TESTABLE!!
@@ -74,12 +74,12 @@ Watch your NAMING!!!
  - Be cautious of the way you name things! Don't use names like vaule1, value2, and temp. Also be careful that singular and plural nouns do not name a class book if it only holds the title and author it should be called book.
  - For examples:
   -- Not to do it!!!
-   find(string id){
+   - find(string id){
    Var temp = clients.Find(client => client.id == id)
    }
 
   -- To do!!!
-   GetClientById(string id){
+   - GetClientById(string id){
    Var foundClient = clients.Find(client => client.id == id)
 
    Return foundClient;
@@ -87,7 +87,7 @@ Watch your NAMING!!!
 
  - For examples:
   -- Not to do it!!
-   class Books{
+   - class Books{
        public Books(String title, String author){
          this._title = title;
          this._author = author;
@@ -96,7 +96,7 @@ Watch your NAMING!!!
 
 
   -- To do!!!
-   class Book{
+   - class Book{
        public Book(String title, String author){
          this._title = title;
          this._author = author;
@@ -108,14 +108,14 @@ Watch your NAMING!!!
 Always check for null or wrong values!!
  - Examples:
   -- Not to do it!!!
-   GetClientById(string id, List clients){
+   - GetClientById(string id, List clients){
    Var foundClient = clients.Find(client => client.id == id)
 
    Return foundClient;
    }
 
   -- To do!!!!
-   GetClientById(string id, List clients){
+   - GetClientById(string id, List clients){
     if(id == string.empty)
      Return
     if(clients == null)
