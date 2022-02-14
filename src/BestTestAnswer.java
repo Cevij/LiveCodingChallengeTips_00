@@ -45,7 +45,7 @@ class User{
 	    
 	    private String GetLatestBooksForProfile() {
 	    	if(this._dateAndBookList.size() == 0 ) {
-	    		return "No books found!";
+	    		return "No books found";
 	    	}
 	    	
 	    	Book[] bookList = new Book[this._dateAndBookList.size()];
@@ -87,7 +87,7 @@ class User{
 	    
 	    public String ListOfBooksAndDates(){
 	    	if(this._dateAndBookList.isEmpty()) {
-	    		return "No books found!";
+	    		return "No books found";
 	    	}
 	    	
 	    	for(Map.Entry<LocalDate, List<Book>> bookEntries: this._dateAndBookList.entrySet()) {
@@ -95,7 +95,7 @@ class User{
 	    			System.out.printf("%n Book %s was finished on %s %n",book.GetTitle()+" - "+book.GetAuthor(), bookEntries.getKey().toString());
 	    		}
 	    	}
-	    	return "All books found!"; 
+	    	return "All books found"; 
 	    }
 	    
 	    private int GetNumberOfBooksRead(){
