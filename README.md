@@ -35,7 +35,7 @@ Read the question THOROUGHLY!!
 
 First paragraph:
 - I see the nouns Social Service, Users, and Books. 
-  - I now need to determine how we will use these nouns. I decided to have them all as classes
+- 	I now need to determine how we will use these nouns. I decided to have them all as classes
 
 First Question:
  - I see the phases add users and list users. 
